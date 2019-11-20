@@ -26,6 +26,8 @@ let NERDTreeDirArrows = 1
 "plug
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
+Plug 'airblade/vim-gitgutter'
+let g:gitgutter_preview_win_floating = 1
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'pangloss/vim-javascript'
