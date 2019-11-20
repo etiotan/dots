@@ -2,6 +2,11 @@
 set relativenumber number
 set cursorline
 set clipboard=unnamed
+set number
+syntax on
+filetype plugin indent on
+filetype on
+filetype indent on
 "key mappings
 let mapleader = ","
 :imap jj <esc>
@@ -44,13 +49,6 @@ command! -bang -nargs=* Rg
       \           : fzf#vim#with_preview('right:50%:hidden', '?'),
       \   <bang>0)
 
-" linting
-" plug 'dense-analysis/ale'
-" plug 'sbdchd/neoformat'
-" let g:ale_fixers = {
-\   'javascript': ['eslint'],
-\   'css': ['prettier'],
-\}
 
 "intellisenseg
 Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
