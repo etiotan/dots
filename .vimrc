@@ -5,6 +5,8 @@ set clipboard=unnamed
 set number
 set wrap linebreak
 set hlsearch
+set swapfile
+set dir=~/.vim/tmp
 syntax on
 filetype plugin indent on
 filetype plugin on
@@ -26,7 +28,9 @@ let NERDTreeDirArrows = 1
 "plug
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
+Plug 'jiangmiao/auto-pairs'
 let g:gitgutter_preview_win_floating = 1
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
