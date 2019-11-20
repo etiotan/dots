@@ -3,8 +3,11 @@ set relativenumber number
 set cursorline
 set clipboard=unnamed
 set number
+set wrap linebreak
+set hlsearch
 syntax on
 filetype plugin indent on
+filetype plugin on
 filetype on
 filetype indent on
 "key mappings
@@ -24,6 +27,7 @@ let NERDTreeDirArrows = 1
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
 Plug 'pangloss/vim-javascript'
 Plug 'othree/yajs.vim'
 Plug 'mxw/vim-jsx'
