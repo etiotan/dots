@@ -1,2 +1,3 @@
 # vimrc
-vim dots
+- vim dots
+- zshrc

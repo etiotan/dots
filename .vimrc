@@ -6,6 +6,7 @@ set number
 set wrap linebreak
 set hlsearch
 set swapfile
+set splitright
 set dir=~/.vim/tmp
 syntax on
 filetype plugin indent on
@@ -29,7 +30,10 @@ let NERDTreeDirArrows = 1
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
-Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gd :Gdiff<CR>
+nnoremap <Leader>gb :Gblame<CR>
 Plug 'jiangmiao/auto-pairs'
 let g:gitgutter_preview_win_floating = 1
 Plug 'scrooloose/nerdtree'
@@ -44,7 +48,7 @@ let g:javascript_plugin_jsdoc = 1
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 let g:fzf_action = {
-      \ 'ctrl-t': 'vsplit'
+      \ 'ctrl-s': 'vsplit'
       \ }
 augroup fzf
   autocmd!
@@ -156,10 +160,6 @@ xmap if <Plug>(coc-funcobj-i)
 xmap af <Plug>(coc-funcobj-a)
 omap if <Plug>(coc-funcobj-i)
 omap af <Plug>(coc-funcobj-a)
-
-" Use <C-d> for select selections ranges, needs server support, like: coc-tsserver, coc-python
-nmap <silent> <C-d> <Plug>(coc-range-select)
-xmap <silent> <C-d> <Plug>(coc-range-select)
 
 " Use `:Format` to format current buffer
 command! -nargs=0 Format :call CocAction('format')
