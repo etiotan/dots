@@ -20,7 +20,7 @@ nnoremap <C-e> :NERDTreeToggle<cr>
 nnoremap <silent> <Leader>e :NERDTreeFind<CR>
 nnoremap <C-p> :FZF<cr>
 nnoremap <C-f> :Rg<cr>
-
+nnoremap <leader>v :e $MYVIMRC<CR>
 " No More Arrow Keys
 nnoremap <Left> :echo "No Left for you!"<CR>
 vnoremap <Left> :<C-u>echo "No Left for you!"<CR>
