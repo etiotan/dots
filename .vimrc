@@ -6,7 +6,7 @@ set number
 set wrap linebreak
 set hlsearch
 set swapfile
-set splitright
+" set splitright
 set dir=~/.vim/tmp
 syntax on
 filetype plugin indent on
@@ -20,6 +20,22 @@ nnoremap <C-e> :NERDTreeToggle<cr>
 nnoremap <silent> <Leader>e :NERDTreeFind<CR>
 nnoremap <C-p> :FZF<cr>
 nnoremap <C-f> :Rg<cr>
+
+" No More Arrow Keys
+nnoremap <Left> :echo "No Left for you!"<CR>
+vnoremap <Left> :<C-u>echo "No Left for you!"<CR>
+inoremap <Left> <C-o>:echo "No Left for you!"<CR>
+nnoremap <Right> :echo "No Right for you!"<CR>
+vnoremap <Right> :<C-u>echo "No Right for you!"<CR>
+inoremap <Right> <C-o>:echo "No Right for you!"<CR>
+nnoremap <Down> :echo "No Down for you!"<CR>
+vnoremap <Down> :<C-u>echo "No Down for you!"<CR>
+inoremap <Down> <C-o>:echo "No Down for you!"<CR>
+nnoremap <Up> :echo "No Up for you!"<CR>
+vnoremap <Up> :<C-u>echo "No Up for you!"<CR>
+inoremap <Up> <C-o>:echo "No Up for you!"<CR>
+"nerdtree
+"nerdtree
 "nerdtree
 " ignore file patterns in wildmenu (so in ctrlp) and in nerdtree
 let nerdtreeignore = ['^\.git$','^\.svn$','.*.js.map$','^tags$'] ",'^node_modules$','^vendor$','^dist$'
@@ -30,14 +46,15 @@ let NERDTreeDirArrows = 1
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
 nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gd :Gdiff<CR>
 nnoremap <Leader>gb :Gblame<CR>
 Plug 'jiangmiao/auto-pairs'
 let g:gitgutter_preview_win_floating = 1
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
 Plug 'pangloss/vim-javascript'
 Plug 'othree/yajs.vim'
 Plug 'mxw/vim-jsx'
