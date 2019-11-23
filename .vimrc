@@ -5,9 +5,7 @@ set clipboard=unnamed
 set number
 set wrap linebreak
 set hlsearch
-set swapfile
 " set splitright
-set dir=~/.vim/tmp
 syntax on
 filetype plugin indent on
 filetype plugin on
@@ -35,8 +33,6 @@ nnoremap <Up> :echo "No Up for you!"<CR>
 vnoremap <Up> :<C-u>echo "No Up for you!"<CR>
 inoremap <Up> <C-o>:echo "No Up for you!"<CR>
 "nerdtree
-"nerdtree
-"nerdtree
 " ignore file patterns in wildmenu (so in ctrlp) and in nerdtree
 let nerdtreeignore = ['^\.git$','^\.svn$','.*.js.map$','^tags$'] ",'^node_modules$','^vendor$','^dist$'
 let NERDTreeQuitOnOpen = 1
@@ -46,6 +42,8 @@ let NERDTreeDirArrows = 1
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+let g:airline_theme='wombat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
@@ -86,9 +84,10 @@ Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 " if hidden is not set, TextEdit might fail.
 set hidden
 
-" Some servers have issues with backup files, see #649
+" no back ups or swaps
 set nobackup
 set nowritebackup
+set noswapfile
 
 " Better display for messages
 set cmdheight=2
