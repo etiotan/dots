@@ -5,7 +5,6 @@ set clipboard=unnamed
 set number
 set wrap linebreak
 set hlsearch
-" set splitright
 syntax on
 filetype plugin indent on
 filetype plugin on
@@ -19,6 +18,7 @@ nnoremap <silent> <Leader>e :NERDTreeFind<CR>
 nnoremap <C-p> :FZF<cr>
 nnoremap <C-f> :Rg<cr>
 nnoremap <leader>v :e $MYVIMRC<CR>
+let g:user_emmet_leader_key=','
 " No More Arrow Keys
 nnoremap <Left> :echo "No Left for you!"<CR>
 vnoremap <Left> :<C-u>echo "No Left for you!"<CR>
@@ -42,6 +42,7 @@ let NERDTreeDirArrows = 1
 call plug#begin('~/.vim/plugged')
 "Themes
 Plug 'morhetz/gruvbox'
+Plug 'drewtempelmeyer/palenight.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 let g:airline_theme='wombat'
@@ -57,8 +58,8 @@ let g:gitgutter_preview_win_floating = 1
 Plug 'scrooloose/nerdtree'
 Plug 'pangloss/vim-javascript'
 Plug 'othree/yajs.vim'
-Plug 'mxw/vim-jsx'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'mattn/emmet-vim'
 let g:javascript_plugin_jsdoc = 1
 
 " fuzzy file finder
