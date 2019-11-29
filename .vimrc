@@ -12,11 +12,13 @@ filetype on
 filetype indent on
 "key mappings
 let mapleader = ","
-:imap jj <esc>
+" :imap jj <esc>
+
 nnoremap <C-e> :NERDTreeToggle<cr>
 nnoremap <silent> <Leader>e :NERDTreeFind<CR>
 nnoremap <C-p> :FZF<cr>
 nnoremap <C-f> :Rg<cr>
+map <leader>l :nohl<CR>
 nnoremap <leader>v :e $MYVIMRC<CR>
 let g:user_emmet_leader_key=','
 " No More Arrow Keys
@@ -56,11 +58,12 @@ nnoremap <Leader>gb :Gblame<CR>
 Plug 'jiangmiao/auto-pairs'
 let g:gitgutter_preview_win_floating = 1
 Plug 'scrooloose/nerdtree'
-Plug 'pangloss/vim-javascript'
-Plug 'othree/yajs.vim'
-Plug 'maxmellon/vim-jsx-pretty'
+" Plug 'pangloss/vim-javascript'
+" Plug 'othree/yajs.vim'
+Plug 'sheerun/vim-polyglot'
+" Plug 'maxmellon/vim-jsx-pretty'
 Plug 'mattn/emmet-vim'
-let g:javascript_plugin_jsdoc = 1
+" let g:javascript_plugin_jsdoc = 1
 
 " fuzzy file finder
 Plug '/usr/local/opt/fzf'
