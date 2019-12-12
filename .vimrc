@@ -13,7 +13,6 @@ filetype indent on
 "key mappings
 let mapleader = ","
 " :imap jj <esc>
-
 nnoremap <C-e> :NERDTreeToggle<cr>
 nnoremap <silent> <Leader>e :NERDTreeFind<CR>
 nnoremap <C-p> :FZF<cr>
@@ -92,9 +91,9 @@ set hidden
 
 " no back ups or swaps
 set nobackup
-set nowritebackup
 set noswapfile
-
+set nowritebackup
+set directory^=$HOME/.vim/tmp//
 " Better display for messages
 set cmdheight=2
 
