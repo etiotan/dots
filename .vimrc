@@ -33,6 +33,11 @@ inoremap <Down> <C-o>:echo "No Down for you!"<CR>
 nnoremap <Up> :echo "No Up for you!"<CR>
 vnoremap <Up> :<C-u>echo "No Up for you!"<CR>
 inoremap <Up> <C-o>:echo "No Up for you!"<CR>
+""" Configuration example float term
+let g:floaterm_keymap_new    = '<F1>'
+let g:floaterm_keymap_prev   = '<F2>'
+let g:floaterm_keymap_next   = '<F3>'
+let g:floaterm_keymap_toggle = '<F4>'
 "nerdtree
 " ignore file patterns in wildmenu (so in ctrlp) and in nerdtree
 let nerdtreeignore = ['^\.git$','^\.svn$','.*.js.map$','^tags$'] ",'^node_modules$','^vendor$','^dist$'
@@ -42,15 +47,17 @@ let NERDTreeDirArrows = 1
 "plug
 call plug#begin('~/.vim/plugged')
 "Themes
-Plug 'morhetz/gruvbox'
-Plug 'drewtempelmeyer/palenight.vim'
+Plug 'sainnhe/edge'
+Plug 'ayu-theme/ayu-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-let g:airline_theme='wombat'
+let g:airline_theme='bubblegum'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'voldikss/vim-floaterm'
 nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gd :Gdiff<CR>
 nnoremap <Leader>gb :Gblame<CR>
@@ -212,4 +219,6 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 call plug#end()
-:colorscheme gruvbox
+colorscheme gruvbox
+" for dark version
+" set background=dark
