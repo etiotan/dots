@@ -1,9 +1,0 @@
-{
-  "eslint.autoFixOnSave": false,
-  "suggest.timeout": 2000,
-      "solargraph.diagnostics": true,
-  "solargraph.autoformat": true,
-  "solargraph.formatting": true,
-  "solargraph.hover": true,
-  "coc.preferences.formatOnSaveFiletypes": ["css","ruby","javascript","javascriptreact","typescript","typescriptreact", "json", "graphql", "scss"]
-}
