@@ -18,6 +18,7 @@ nnoremap <silent> <Leader>e :NERDTreeFind<CR>
 nnoremap <C-p> :FZF<cr>
 nnoremap <C-f> :Rg<cr>
 map <leader>l :nohl<CR>
+map <leader>g :G<CR>
 nnoremap <leader>v :e $MYVIMRC<CR>
 let g:user_emmet_leader_key=','
 " No More Arrow Keys
@@ -72,7 +73,8 @@ Plug 'mattn/emmet-vim'
 " let g:javascript_plugin_jsdoc = 1
 
 " fuzzy file finder
-Plug '/usr/local/opt/fzf'
+set rtp+=/usr/local/opt/fzf
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 let g:fzf_action = {
       \ 'ctrl-s': 'vsplit'
@@ -92,7 +94,7 @@ command! -bang -nargs=* Rg
 
 
 "intellisenseg
-Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " if hidden is not set, TextEdit might fail.
 set hidden
 
