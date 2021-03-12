@@ -99,18 +99,28 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias be="bundle exec"
 alias resetbt="blueutil -p 0 && sleep 1 && blueutil -p 1"
+
+# rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
-export GEM_HOME="/usr/local/lib/ruby/gems/"
-export PATH="$GEM_HOME/bin:$PATH"
+# export GEM_HOME="/usr/local/lib/ruby/gems/"
+# export PATH="$GEM_HOME/bin:$PATH"
+
 export FZF_DEFAULT_COMMAND='rg --files --hidden' 
 alias v='mvim -v'
+alias stage-deploy="rsync -chavzP --stats . deploy@72.51.30.182:/data/web/api.inkblottherapy.com/current/ --exclude .git --exclude tmp --exclude node_modules --exclude log --exclude public"
+alias stage-restart="ssh deploy@72.51.30.182 -t 'cd /data/web/api.inkblottherapy.com/current/; chruby 2.3.3; bundle install --without test development; bundle exec rake db:migrate; sudo supervisorctl restart all'"
 alias stage-term="ssh deploy@72.51.30.182 -t 'cd /data/web/api.inkblottherapy.com/current/; chruby 2.3.3; bundle exec rails c'"
 
+
+alias us-dev-deploy="rsync -chavzP --stats . deploy-inkblot-us-dev-1.medstack.net:~/api.inkblottherapy.net/current/ --exclude .git --exclude tmp --exclude node_modules --exclude log --exclude public"
+
+
 alias prod-term="ssh deploy@162.248.180.58 -t 'cd /data/web/api.inkblotpractice.com/current/; chruby 2.3.3; bundle exec rails c'"
+alias prod2-ssh="ssh deploy@162.248.181.16"
+alias prod1-ssh="ssh deploy@162.248.180.58"
 
-alias prod-deploy="rsync -chavzP --stats . deploy@162.248.181.16:/data/web/api.inkblotpractice.com/current/ --exclude .git --exclude tmp --exclude node_modules --exclude log --exclude public;rsync -chavzP --stats . deploy@162.248.180.58:/data/web/api.inkblotpractice.com/current/ --exclude .git --exclude tmp --exclude node_modules --exclude log --exclude public"
-
-alias prod-restart="ssh deploy@162.248.180.58 -t 'cd /data/web/api.inkblotpractice.com/current/; chruby 2.3.3; bundle install --without test development; bundle exec rake db:migrate; sudo supervisorctl restart all'; ssh deploy@162.248.181.16 -t 'cd /data/web/api.inkblotpractice.com/current/; sudo supervisorctl restart all'"
+alias prod-deploy="rsync -chavzP --stats . deploy@162.248.181.16:/data/web/api.inkblotpractice.com/current/ --exclude .git --exclude tmp --exclude node_modules --exclude log --exclude public;rsync -chavzP --stats . deploy@162.248.180.58:/data/web/api.inkblotpractice.com/current/ --exclude .git --exclude tmp --exclude node_modules --exclude log --exclude public;rsync -chavzP --stats . deploy@162.248.180.50:/data/web/api.inkblotpractice.com/current/ --exclude .git --exclude tmp --exclude node_modules --exclude log --exclude public"
+alias prod-restart="ssh deploy@162.248.180.58 -t 'cd /data/web/api.inkblotpractice.com/current/; chruby 2.3.3; bundle install; bundle exec rake db:migrate; sudo supervisorctl restart all'; ssh deploy@162.248.181.16 -t 'cd /data/web/api.inkblotpractice.com/current/; chruby 2.3.3; bundle install; sudo supervisorctl restart all'; ssh deploy@162.248.180.50 -t 'cd /data/web/api.inkblotpractice.com/current/; chruby 2.3.3; bundle install; bundle exec rake db:migrate; sudo supervisorctl restart all'"

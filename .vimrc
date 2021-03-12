@@ -34,11 +34,6 @@ inoremap <Down> <C-o>:echo "No Down for you!"<CR>
 nnoremap <Up> :echo "No Up for you!"<CR>
 vnoremap <Up> :<C-u>echo "No Up for you!"<CR>
 inoremap <Up> <C-o>:echo "No Up for you!"<CR>
-""" Configuration example float term
-let g:floaterm_keymap_new    = '<F1>'
-let g:floaterm_keymap_prev   = '<F2>'
-let g:floaterm_keymap_next   = '<F3>'
-let g:floaterm_keymap_toggle = '<F4>'
 "nerdtree
 " ignore file patterns in wildmenu (so in ctrlp) and in nerdtree
 let nerdtreeignore = ['^\.git$','^\.svn$','.*.js.map$','^tags$'] ",'^node_modules$','^vendor$','^dist$'
@@ -58,17 +53,13 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'rafi/awesome-vim-colorschemes'
-Plug 'voldikss/vim-floaterm'
 nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gd :Gdiff<CR>
 nnoremap <Leader>gb :Gblame<CR>
 Plug 'jiangmiao/auto-pairs'
 let g:gitgutter_preview_win_floating = 1
 Plug 'scrooloose/nerdtree'
-" Plug 'pangloss/vim-javascript'
-" Plug 'othree/yajs.vim'
 Plug 'sheerun/vim-polyglot'
-" Plug 'maxmellon/vim-jsx-pretty'
 Plug 'mattn/emmet-vim'
 " let g:javascript_plugin_jsdoc = 1
 
@@ -77,7 +68,7 @@ set rtp+=/usr/local/opt/fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 let g:fzf_action = {
-      \ 'ctrl-s': 'vsplit'
+      \ 'ctrl-x': 'vsplit'
       \ }
 augroup fzf
   autocmd!
@@ -94,6 +85,7 @@ command! -bang -nargs=* Rg
 
 
 "intellisenseg
+" Plug 'neoclide/coc.nvim', {'commit': '4e72e5b~'}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " if hidden is not set, TextEdit might fail.
 set hidden
