@@ -43,11 +43,9 @@ let NERDTreeDirArrows = 1
 "plug
 call plug#begin('~/.vim/plugged')
 "Themes
-Plug 'sainnhe/edge'
-Plug 'ayu-theme/ayu-vim'
+Plug 'etiotan/vim-monochrome'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-let g:airline_theme='bubblegum'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
@@ -60,7 +58,8 @@ Plug 'jiangmiao/auto-pairs'
 let g:gitgutter_preview_win_floating = 1
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
-Plug 'mattn/emmet-vim'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 " let g:javascript_plugin_jsdoc = 1
 
 " fuzzy file finder
@@ -213,6 +212,11 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 call plug#end()
-colorscheme gruvbox
-" for dark version
-" set background=dark
+
+" Themes
+let g:airline_theme='papercolor'
+colorscheme monochrome
+" colorscheme gruvbox
+highlight clear SignColumn
+highlight  Pmenu ctermbg=black ctermfg=white
+

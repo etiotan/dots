@@ -6,6 +6,7 @@
   "solargraph.formatting": true,
   "solargraph.hover": true,
   "coc.preferences.formatOnSaveFiletypes": [
+    "html",
     "css",
     "ruby",
     "json",
