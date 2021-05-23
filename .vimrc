@@ -67,7 +67,8 @@ set rtp+=/usr/local/opt/fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 let g:fzf_action = {
-      \ 'ctrl-x': 'vsplit'
+      \ 'ctrl-x': 'vsplit',
+      \ 'ctrl-t': 'tabedit'
       \ }
 augroup fzf
   autocmd!
@@ -216,7 +217,6 @@ call plug#end()
 " Themes
 let g:airline_theme='papercolor'
 colorscheme monochrome
-" colorscheme gruvbox
 highlight clear SignColumn
 highlight  Pmenu ctermbg=black ctermfg=white
 
