@@ -2,7 +2,7 @@
 
 cp ~/.zshrc ~/.dotfiles/
 cp ~/.vimrc ~/.dotfiles/
-cp -R ~/.vim/init ~/.dotfiles/init/
+cp -R ~/.vim/init ~/.dotfiles/
 cp  ~/.vim/coc-settings.json ~/.dotfiles/coc-settings.json
 
 
