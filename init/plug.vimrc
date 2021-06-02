@@ -15,4 +15,5 @@ Plug 'sheerun/vim-polyglot'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'ap/vim-css-color'
 call plug#end()
