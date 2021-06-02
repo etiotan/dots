@@ -1,8 +1,8 @@
 #!/bin/sh
 
-cp ~/.zshrc ~/.dotfiles/
-cp ~/.vimrc ~/.dotfiles/
-cp -R ~/.vim/init ~/.dotfiles/
-cp  ~/.vim/coc-settings.json ~/.dotfiles/coc-settings.json
+cp ~/.zshrc ~/.dots/
+cp ~/.vimrc ~/.dots/
+cp -R ~/.vim/init ~/.dots/
+cp  ~/.vim/coc-settings.json ~/.dots/coc-settings.json
 
 echo "Dot files copied"
