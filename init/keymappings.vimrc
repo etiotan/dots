@@ -16,7 +16,6 @@ let g:user_emmet_leader_key=','
 let mapleader = ","
 nnoremap <C-e> :NERDTreeToggle<cr>
 nnoremap <silent> <Leader>e :NERDTreeFind<CR>
-nnoremap <C-p> :FZF<cr>
 nnoremap <C-f> :Rg<cr>
 nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gd :Gdiff<CR>
