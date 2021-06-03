@@ -1,5 +1,4 @@
 "nerdtree
-" ignore file patterns in wildmenu (so in ctrlp) and in nerdtree
 let nerdtreeignore = ['^\.git$','^\.svn$','.*.js.map$','^tags$'] ",'^node_modules$','^vendor$','^dist$'
 let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1

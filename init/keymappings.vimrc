@@ -11,6 +11,7 @@ inoremap <Down> <C-o>:echo "No Down for you!"<CR>
 nnoremap <Up> :echo "No Up for you!"<CR>
 vnoremap <Up> :<C-u>echo "No Up for you!"<CR>
 inoremap <Up> <C-o>:echo "No Up for you!"<CR>
+
 " leader mappings
 let g:user_emmet_leader_key=','
 let mapleader = ","
