@@ -6,8 +6,6 @@ let NERDTreeDirArrows = 1
 
 " fuzzy file finder
 set rtp+=/usr/local/opt/fzf
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 let g:fzf_action = {
       \ 'ctrl-x': 'vsplit',
       \ 'ctrl-t': 'tabedit'
