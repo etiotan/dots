@@ -22,8 +22,16 @@ filetype on
 filetype indent on
 syntax on
 " Themes
-let g:airline_theme='minimalist'
 let g:gitgutter_preview_win_floating = 1
 colorscheme monochrome
 highlight clear SignColumn
 highlight  Pmenu ctermbg=black ctermfg=white
+" Airline
+let g:airline_theme='minimalist'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#tab_nr_type = 1
+let g:airline#extensions#tabline#show_close_button = 0
+let g:airline#extensions#tabline#show_splits = 0
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+
