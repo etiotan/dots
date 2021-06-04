@@ -28,3 +28,4 @@ map <leader>g :G<CR>
 
 nnoremap <leader>w :e ~/Work<CR>
 nnoremap <leader>cf :let @*=expand("%")<CR>
+nnoremap <leader>rt :!rake test TEST=%<CR>
