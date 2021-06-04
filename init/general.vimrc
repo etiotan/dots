@@ -10,7 +10,6 @@ set hidden
 set updatetime=300
 set shortmess+=c
 set signcolumn=yes
-autocmd BufEnter * silent! lcd %:p:h " editing file uses same working directory
 " no back ups or swaps
 set nobackup
 set noswapfile

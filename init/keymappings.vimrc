@@ -24,3 +24,5 @@ nnoremap <Leader>gb :Gblame<CR>
 nnoremap <leader>v :e $MYVIMRC<CR>
 map <leader>l :nohl<CR>
 map <leader>g :G<CR>
+
+nnoremap <leader>w :e ~/Work<CR>
