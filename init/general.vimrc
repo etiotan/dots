@@ -10,6 +10,7 @@ set hidden
 set updatetime=300
 set shortmess+=c
 set signcolumn=yes
+set splitbelow
 " no back ups or swaps
 set nobackup
 set noswapfile
