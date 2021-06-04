@@ -22,7 +22,7 @@ filetype on
 filetype indent on
 syntax on
 " Themes
-let g:airline_theme='papercolor'
+let g:airline_theme='minimalist'
 let g:gitgutter_preview_win_floating = 1
 colorscheme monochrome
 highlight clear SignColumn
