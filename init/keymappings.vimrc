@@ -22,7 +22,9 @@ nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gd :Gdiff<CR>
 nnoremap <Leader>gb :Gblame<CR>
 nnoremap <leader>v :e $MYVIMRC<CR>
+nnoremap <leader>t :tab term<CR>
 map <leader>l :nohl<CR>
 map <leader>g :G<CR>
 
 nnoremap <leader>w :e ~/Work<CR>
+nnoremap <leader>cf :let @*=expand("%")<CR>

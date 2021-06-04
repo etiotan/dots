@@ -1,5 +1,6 @@
 " source $HOME/.dots/
 " source $HOME/.zshrc
+" source $HOME/.vim/coc-settings.json
 source $HOME/.vim/init/plug.vimrc
 source $HOME/.vim/init/general.vimrc
 source $HOME/.vim/init/keymappings.vimrc    
