@@ -23,6 +23,7 @@ nnoremap <Leader>gd :Gdiff<CR>
 nnoremap <Leader>gb :Gblame<CR>
 nnoremap <leader>v :e $MYVIMRC<CR>
 nnoremap <leader>t :tab term<CR>
+nnoremap <leader>h :History<CR>
 map <leader>l :nohl<CR>
 map <leader>g :G<CR>
 

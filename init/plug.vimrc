@@ -16,4 +16,5 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ap/vim-css-color'
+Plug 'yggdroot/indentline'
 call plug#end()
