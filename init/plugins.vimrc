@@ -3,6 +3,8 @@ let nerdtreeignore = ['^\.git$','^\.svn$','.*.js.map$','^tags$'] ",'^node_module
 let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
+let NERDTreeShowLineNumbers=1
+autocmd FileType nerdtree setlocal relativenumber
 
 " fuzzy file finder
 set rtp+=/usr/local/opt/fzf

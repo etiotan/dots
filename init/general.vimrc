@@ -1,26 +1,25 @@
-"settings
-set relativenumber number
-set cursorline
+filetype indent on
+filetype on
+filetype plugin indent on
+filetype plugin on
 set clipboard=unnamed
-set number
-set wrap linebreak
-set hlsearch
 set cmdheight=2
+set cursorline
+set directory^=$HOME/.vim/tmp//
 set hidden
-set updatetime=300
-set shortmess+=c
-set signcolumn=yes
-set splitbelow
-" no back ups or swaps
+set hlsearch
 set nobackup
 set noswapfile
 set nowritebackup
-set directory^=$HOME/.vim/tmp//
-filetype plugin indent on
-filetype plugin on
-filetype on
-filetype indent on
+set number
+set relativenumber number
+set shortmess+=c
+set signcolumn=yes
+set splitbelow
+set updatetime=300
+set wrap linebreak
 syntax on
+
 " Themes
 let g:gitgutter_preview_win_floating = 1
 colorscheme monochrome
