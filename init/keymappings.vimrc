@@ -28,5 +28,5 @@ nnoremap <leader>v :e $MYVIMRC<CR>
 nnoremap <silent> <Leader>e :NERDTreeFind<CR>
 
 nnoremap <leader>cf :let @*=expand("%")<CR>
-nnoremap <leader>rt :!rake test TEST=%<CR>
+nnoremap <leader>rt :!rails test %<CR>
 nnoremap <leader>w :e ~/Work<CR>
