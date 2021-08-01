@@ -28,5 +28,11 @@ nnoremap <leader>v :e $MYVIMRC<CR>
 nnoremap <silent> <Leader>e :NERDTreeFind<CR>
 
 nnoremap <leader>cf :let @*=expand("%")<CR>
-nnoremap <leader>rt :!rails test %<CR>
 nnoremap <leader>w :e ~/Work<CR>
+
+nnoremap <leader>rf :TestFile<CR>
+nnoremap <leader>rs :TestSuite<CR>
+nnoremap <leader>rr :TestLast<CR>
+nnoremap <leader>rt :TestNearest<CR>
+let test#strategy = "vimterminal"
+let test#vim#term_position = "vert"

@@ -16,4 +16,6 @@ Plug 'plasticboy/vim-markdown'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ap/vim-css-color'
 Plug 'yggdroot/indentline'
+Plug 'vim-test/vim-test'
+Plug 'vimwiki/vimwiki'
 call plug#end()

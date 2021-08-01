@@ -18,6 +18,7 @@ set signcolumn=yes
 set splitbelow
 set updatetime=300
 set wrap linebreak
+set so=999
 syntax on
 
 " Themes
