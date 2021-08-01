@@ -19,6 +19,7 @@ set splitbelow
 set updatetime=300
 set wrap linebreak
 set so=999
+set tw=80
 syntax on
 
 " Themes
