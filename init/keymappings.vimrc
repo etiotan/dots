@@ -34,5 +34,7 @@ nnoremap <leader>rf :TestFile<CR>
 nnoremap <leader>rs :TestSuite<CR>
 nnoremap <leader>rr :TestLast<CR>
 nnoremap <leader>rt :TestNearest<CR>
+
+nnoremap <leader>rc :!rubocop % -A<CR>
 let test#strategy = "vimterminal"
 let test#vim#term_position = "vert"

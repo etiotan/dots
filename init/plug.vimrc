@@ -4,7 +4,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'etiotan/vim-monochrome'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
@@ -14,8 +13,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'ap/vim-css-color'
 Plug 'yggdroot/indentline'
 Plug 'vim-test/vim-test'
-Plug 'vimwiki/vimwiki'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()

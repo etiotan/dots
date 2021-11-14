@@ -28,3 +28,5 @@ command! -bang -nargs=* Rg
 
 " coc stuff
 source $HOME/.vim/init/coc.vimrc
+" disable coc by default
+let g:coc_start_at_startup = v:false

@@ -20,6 +20,7 @@ set updatetime=300
 set wrap linebreak
 set so=999
 set tw=80
+set showcmd
 syntax on
 
 " Themes
