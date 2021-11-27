@@ -25,7 +25,7 @@ syntax on
 
 " Themes
 let g:gitgutter_preview_win_floating = 1
-colorscheme candle-grey
+colorscheme very-plain
 highlight clear SignColumn
 highlight  Pmenu ctermbg=black ctermfg=white
 " Airline
