@@ -21,7 +21,6 @@ nnoremap <C-e> :NERDTreeToggle<cr>
 nnoremap <C-f> :Rg<cr>
 nnoremap <Leader>gb :Gblame<CR>
 nnoremap <Leader>gd :Gdiff<CR>
-nnoremap <Leader>gs :Git<CR>
 nnoremap <leader>h :History<CR>
 nnoremap <leader>t :tab term<CR>
 nnoremap <leader>v :e $MYVIMRC<CR>
