@@ -24,9 +24,3 @@ command! -bang -nargs=* Rg
       \   <bang>0 ? fzf#vim#with_preview('up:60%')
       \           : fzf#vim#with_preview('right:50%:hidden', '?'),
       \   <bang>0)
-
-
-" coc stuff
-source $HOME/.vim/init/coc.vimrc
-" disable coc by default
-let g:coc_start_at_startup = v:false

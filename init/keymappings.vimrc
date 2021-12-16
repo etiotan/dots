@@ -13,15 +13,14 @@ vnoremap <Right> :<C-u>echo "No Right for you!"<CR>
 vnoremap <Up> :<C-u>echo "No Up for you!"<CR>
 
 " leader mappings
-let g:user_emmet_leader_key=','
 let mapleader = ","
 map <leader>g :G<CR>
 map <leader>l :nohl<CR>
 nnoremap <C-e> :NERDTreeToggle<cr>
 nnoremap <C-f> :Rg<cr>
-nnoremap <Leader>gb :Gblame<CR>
-nnoremap <Leader>gd :Gdiff<CR>
-nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gb :Git blame<CR>
+nnoremap <Leader>gd :Git diff<CR>
+nnoremap <Leader>gs :Git status<CR>
 nnoremap <leader>h :History<CR>
 nnoremap <leader>t :tab term<CR>
 nnoremap <leader>v :e $MYVIMRC<CR>
