@@ -1,4 +1,4 @@
-;; Set up package.el to work with MELPA
+ ;; Set up package.el to work with MELPA
 (require 'package)
 (add-to-list 'package-archives
 	     '("melpa" . "https://melpa.org/packages/")) (package-initialize)
@@ -14,23 +14,52 @@
  '(custom-safe-themes
    '("021321ae56a45794f43b41de09fb2bfca184e196666b7d7ff59ea97ec2114559" "4780d7ce6e5491e2c1190082f7fe0f812707fc77455616ab6f8b38e796cbffa9" "3e335d794ed3030fefd0dbd7ff2d3555e29481fe4bbb0106ea11c660d6001767" default))
  '(inhibit-startup-screen t)
- '(package-selected-packages '(google-this magit eink-theme org-journal)))
+ '(package-selected-packages
+   '(org-roam-ui use-package org-roam google-this magit eink-theme)))
 
 
 (global-display-line-numbers-mode 1)
 (setq display-line-numbers-type 'relative)
-
-(org-journal-new-entry nil)
+(global-visual-line-mode t)
 
 (load-theme 'eink t)
 (set-face-foreground 'font-lock-comment-face "#A9A9A9")
 
-(google-this-mode 1)
+
 ;; fontify code in code blocks
 (setq org-src-fontify-natively 1)
       
 (menu-bar-mode -1)
 (tool-bar-mode -1)
+
+;; spellchecker
+(setq ispell-program-name "/usr/local/bin/ispell")
+(add-hook 'text-mode-hook 'flyspell-mode)
+
+(use-package org-roam
+  :ensure t
+  :custom
+  (org-roam-directory (file-truename "~/org-roam"))
+  :bind (("C-c n l" . org-roam-buffer-toggle)
+         ("C-c n f" . org-roam-node-find)
+         ("C-c n g" . org-roam-graph)
+         ("C-c n i" . org-roam-node-insert)
+         ("C-c n c" . org-roam-capture)
+         ;; Dailies
+         ("C-c n j" . org-roam-dailies-capture-today)
+         ("C-c n t" . org-roam-dailies-goto-today)
+         ("C-c n d" . org-roam-dailies-goto-date))
+  :config
+  (org-roam-db-autosync-mode)
+  ;; If using org-roam-protocol
+  (require 'org-roam-protocol))
+  ;; Journaling setup
+  (setq org-roam-dailies-directory "~/org-roam/daily")
+
+
+
+(add-to-list 'load-path "~/.emacs.d/private/org-roam-ui")
+(load-library "org-roam-ui")
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
