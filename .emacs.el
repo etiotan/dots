@@ -32,6 +32,8 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 
+(show-paren-mode 1)
+
 ;; spellchecker
 (setq ispell-program-name "/usr/local/bin/ispell")
 (add-hook 'text-mode-hook 'flyspell-mode)
@@ -42,12 +44,13 @@
   (org-roam-directory (file-truename "~/org-roam"))
   :bind (("C-c n l" . org-roam-buffer-toggle)
          ("C-c n f" . org-roam-node-find)
-         ("C-c n g" . org-roam-graph)
+         ("C-c n g" . org-roam-ui-mode)
          ("C-c n i" . org-roam-node-insert)
          ("C-c n c" . org-roam-capture)
          ;; Dailies
-         ("C-c n j" . org-roam-dailies-capture-today)
-         ("C-c n t" . org-roam-dailies-goto-today)
+         ("C-c n j" . org-roam-dailies-goto-today)
+	 ("C-c n [" . org-roam-dailies-goto-previous-note)
+	 ("C-c n ]" . org-roam-dailies-goto-next-note)
          ("C-c n d" . org-roam-dailies-goto-date))
   :config
   (org-roam-db-autosync-mode)
@@ -55,7 +58,6 @@
   (require 'org-roam-protocol))
   ;; Journaling setup
   (setq org-roam-dailies-directory "~/org-roam/daily")
-
 
 
 (add-to-list 'load-path "~/.emacs.d/private/org-roam-ui")
@@ -70,3 +72,4 @@
  '(org-block ((t (:background "#EFF0F1" :extend t))))
  '(org-block-begin-line ((t (:underline "#A7A6AA" :foreground "#008ED1" :background "#EAEAFF" :extend t))))
  '(org-block-end-line ((t (:overline "#A7A6AA" :foreground "#008ED1" :background "#EAEAFF" :extend t)))))
+
