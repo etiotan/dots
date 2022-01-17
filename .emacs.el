@@ -14,8 +14,9 @@
  '(custom-safe-themes
    '("021321ae56a45794f43b41de09fb2bfca184e196666b7d7ff59ea97ec2114559" "4780d7ce6e5491e2c1190082f7fe0f812707fc77455616ab6f8b38e796cbffa9" "3e335d794ed3030fefd0dbd7ff2d3555e29481fe4bbb0106ea11c660d6001767" default))
  '(inhibit-startup-screen t)
+ '(org-hide-emphasis-markers t)
  '(package-selected-packages
-   '(org-roam-ui use-package org-roam google-this magit eink-theme)))
+   '(smartparens org-roam-ui use-package org-roam google-this magit eink-theme)))
 
 
 (global-display-line-numbers-mode 1)
@@ -59,6 +60,9 @@
   ;; Journaling setup
   (setq org-roam-dailies-directory "~/org-roam/daily")
 
+(require 'smartparens-config)
+
+(smartparens-global-mode 1)
 
 (add-to-list 'load-path "~/.emacs.d/private/org-roam-ui")
 (load-library "org-roam-ui")
@@ -72,4 +76,3 @@
  '(org-block ((t (:background "#EFF0F1" :extend t))))
  '(org-block-begin-line ((t (:underline "#A7A6AA" :foreground "#008ED1" :background "#EAEAFF" :extend t))))
  '(org-block-end-line ((t (:overline "#A7A6AA" :foreground "#008ED1" :background "#EAEAFF" :extend t)))))
-
