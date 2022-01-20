@@ -14,9 +14,10 @@
  '(custom-safe-themes
    '("021321ae56a45794f43b41de09fb2bfca184e196666b7d7ff59ea97ec2114559" "4780d7ce6e5491e2c1190082f7fe0f812707fc77455616ab6f8b38e796cbffa9" "3e335d794ed3030fefd0dbd7ff2d3555e29481fe4bbb0106ea11c660d6001767" default))
  '(inhibit-startup-screen t)
+ '(org-agenda-files '("~/org-roam/20220116132439-binary_search.org"))
  '(org-hide-emphasis-markers t)
  '(package-selected-packages
-   '(smartparens org-roam-ui use-package org-roam google-this magit eink-theme)))
+   '(rjsx-mode smartparens org-roam-ui use-package org-roam google-this magit eink-theme)))
 
 
 (global-display-line-numbers-mode 1)
@@ -49,7 +50,7 @@
          ("C-c n i" . org-roam-node-insert)
          ("C-c n c" . org-roam-capture)
          ;; Dailies
-         ("C-c n j" . org-roam-dailies-goto-today)
+         ("C-c n t" . org-roam-dailies-capture-tomorrow)
 	 ("C-c n [" . org-roam-dailies-goto-previous-note)
 	 ("C-c n ]" . org-roam-dailies-goto-next-note)
          ("C-c n d" . org-roam-dailies-goto-date))
