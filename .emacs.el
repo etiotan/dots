@@ -11,6 +11,10 @@
 (recentf-mode 1)
 (global-set-key (kbd "C-c C-g") 'google-this)
 
+;; Linting
+(require 'prettier-js)
+(add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . rjsx-mode))
+
 ;; Note Taking
 (use-package org-roam
   :ensure t
