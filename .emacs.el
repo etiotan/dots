@@ -10,6 +10,10 @@
 (require 'recentf)
 (recentf-mode 1)
 (global-set-key (kbd "C-c C-g") 'google-this)
+(global-set-key (kbd "C-c C-r") 'recentf-open-files)
+(setq history-length 17)
+(savehist-mode 1)
+(save-place-mode 1)
 
 ;; Linting
 (require 'prettier-js)
