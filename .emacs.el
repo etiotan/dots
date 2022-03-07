@@ -42,11 +42,23 @@
 (load-library "org-roam-ui")
 (setq ispell-program-name "/usr/local/bin/ispell")
 (add-hook 'text-mode-hook 'flyspell-mode)
-
-
+;; '(org-block-begin-line ((t (:underline "#A7A6AA" :foreground "#008ED1" :background "#EAEAFF" :extend t))))
+;;  '(org-block-end-line ((t (:overline "#A7A6AA" :foreground "#008ED1" :background "#EAEAFF" :extend t)))))
 
 ;; Visual Settings
 (show-paren-mode 1)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-agenda-files '("~/Documents/org-roam/daily/2022-03-04.org")))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (global-display-line-numbers-mode 1)
@@ -57,3 +69,4 @@
 (set-face-foreground 'font-lock-comment-face "#A9A9A9")
 (set-face-font 'default "-*-Hack-normal-normal-normal-*-*-*-*-*-m-0-iso10646-1")
 (set-face-attribute 'default (selected-frame) :height 200)
+(setq org-hide-emphasis-markers t)
