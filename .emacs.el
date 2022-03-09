@@ -14,6 +14,7 @@
 (setq history-length 17)
 (savehist-mode 1)
 (save-place-mode 1)
+(desktop-save-mode 1)
 
 ;; Linting
 (require 'prettier-js)
