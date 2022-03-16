@@ -2,7 +2,7 @@
 (require 'package)
 (add-to-list 'package-archives
 	     '("melpa" . "https://melpa.org/packages/")) (package-initialize)
-(package-refresh-contents)
+;;(package-refresh-contents)
 
 ;; Editor Settings
 (require 'smartparens-config)
@@ -68,6 +68,6 @@
 (setq org-src-fontify-natively 1)
 (load-theme 'eink t)
 (set-face-foreground 'font-lock-comment-face "#A9A9A9")
-(set-face-font 'default "-*-Hack-normal-normal-normal-*-*-*-*-*-m-0-iso10646-1")
+;;(set-face-font 'default "-*-Hack-normal-normal-normal-*-*-*-*-*-m-0-iso10646-1")
 (set-face-attribute 'default (selected-frame) :height 200)
 (setq org-hide-emphasis-markers t)
