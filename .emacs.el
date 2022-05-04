@@ -9,7 +9,6 @@
 (smartparens-global-mode 1)
 (require 'recentf)
 (recentf-mode 1)
-(global-set-key (kbd "C-c g") 'google-this)
 (global-set-key (kbd "C-c r") 'recentf-open-files)
 (setq history-length 17)
 (savehist-mode 1)
@@ -17,8 +16,10 @@
 (desktop-save-mode 1)
 
 ;; Linting
+(setq-default show-trailing-whitespace t)
 (require 'prettier-js)
 (add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . rjsx-mode))
+(require 'rubocop)
 
 ;; Note Taking / Org Roam
 (use-package org-roam
