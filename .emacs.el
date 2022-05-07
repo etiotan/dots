@@ -1,25 +1,30 @@
-;; Set up package.el to work with MELPA
+;; Manually refresh M-x package-refresh-contents before packages can be installed
+
+(setq package-archives
+      '(("gnu" . "http://elpa.gnu.org/packages/")
+        ("melpa" . "http://melpa.org/packages/")))
+
 (require 'package)
-(add-to-list 'package-archives
-	     '("melpa" . "https://melpa.org/packages/")) (package-initialize)
-;;(package-refresh-contents)
+(package-initialize)
 
-;; Editor Settings
-(require 'smartparens-config)
-(smartparens-global-mode 1)
-(require 'recentf)
-(recentf-mode 1)
-(global-set-key (kbd "C-c r") 'recentf-open-files)
-(setq history-length 17)
-(savehist-mode 1)
-(save-place-mode 1)
-(desktop-save-mode 1)
+;; Packages
+(setq my-packages
+      '(magit
+	smartparens
+	use-package
+        eink-theme
+        org-roam
+	org-roam-ui
+	rubocop
+	rjsx-mode
+	prettier-js
+        recentf
+))
 
-;; Linting
-(setq-default show-trailing-whitespace t)
-(require 'prettier-js)
-(add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . rjsx-mode))
-(require 'rubocop)
+;; Iterate on packages and install missing ones
+(dolist (pkg my-packages)
+  (unless (package-installed-p pkg)
+    (package-install pkg)))
 
 ;; Note Taking / Org Roam
 (use-package org-roam
@@ -44,23 +49,9 @@
 (load-library "org-roam-ui")
 (setq ispell-program-name "/usr/local/bin/ispell")
 (add-hook 'text-mode-hook 'flyspell-mode)
-;; '(org-block-begin-line ((t (:underline "#A7A6AA" :foreground "#008ED1" :background "#EAEAFF" :extend t))))
-;;  '(org-block-end-line ((t (:overline "#A7A6AA" :foreground "#008ED1" :background "#EAEAFF" :extend t)))))
 
 ;; Visual Settings
 (show-paren-mode 1)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(org-agenda-files '("~/Documents/org-roam/daily/2022-03-04.org")))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (global-display-line-numbers-mode 1)
@@ -70,5 +61,35 @@
 (load-theme 'eink t)
 (set-face-foreground 'font-lock-comment-face "#A9A9A9")
 ;;(set-face-font 'default "-*-Hack-normal-normal-normal-*-*-*-*-*-m-0-iso10646-1")
-(set-face-attribute 'default (selected-frame) :height 200)
+(set-face-attribute 'default (selected-frame) :height 300)
 (setq org-hide-emphasis-markers t)
+
+;; Editor Settings
+(require 'smartparens-config)
+(smartparens-global-mode 1)
+(require 'recentf)
+(recentf-mode 1)
+(global-set-key (kbd "C-c r") 'recentf-open-files)
+(setq history-length 17)
+(savehist-mode 1)
+(save-place-mode 1)
+(desktop-save-mode 1)
+
+;; Linting
+(setq-default show-trailing-whitespace t)
+(require 'prettier-js)
+(add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . rjsx-mode))
+(require 'rubocop)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(prettier-js rubocop org-roam-ui org-roam eink-theme use-package smartparens magit)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
