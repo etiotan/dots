@@ -17,9 +17,10 @@
 	org-roam-ui
 	rubocop
 	rjsx-mode
-	prettier-js
+        prettier-js
         recentf
-))
+	format-all
+	))
 
 ;; Iterate on packages and install missing ones
 (dolist (pkg my-packages)
