@@ -62,7 +62,7 @@
 (load-theme 'eink t)
 (set-face-foreground 'font-lock-comment-face "#A9A9A9")
 ;;(set-face-font 'default "-*-Hack-normal-normal-normal-*-*-*-*-*-m-0-iso10646-1")
-(set-face-attribute 'default (selected-frame) :height 300)
+(set-face-attribute 'default (selected-frame) :height 250)
 (setq org-hide-emphasis-markers t)
 
 ;; Editor Settings
