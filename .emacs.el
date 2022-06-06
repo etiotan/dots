@@ -76,9 +76,8 @@
 (savehist-mode 1)
 (save-place-mode 1)
 (desktop-save-mode 1)
-
 ;; Linting
-(remove-hook 'flymake-diagnostic-functions 'flymake-proc-legacy-flymake)
+
 (require 'ruby-mode)
 (add-to-list 'auto-mode-alist '("\\.rb\\'" . ruby-mode))
 (require 'rjsx-mode)
@@ -86,6 +85,5 @@
 (require 'lsp-mode)
 (add-hook 'rjsx-mode-hook #'lsp)
 (add-hook 'ruby-mode-hook #'lsp)
-
-
+(remove-hook 'flymake-diagnostic-functions 'flymake-proc-legacy-flymake)
 
