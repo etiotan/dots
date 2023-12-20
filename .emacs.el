@@ -87,3 +87,8 @@
 (add-hook 'ruby-mode-hook #'lsp)
 (remove-hook 'flymake-diagnostic-functions 'flymake-proc-legacy-flymake)
 
+;; Disable the ring bell
+(setq ring-bell-function 'ignore)
+
+
+
